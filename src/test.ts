@@ -13,8 +13,8 @@ declare const require: {
     deep?: boolean,
     filter?: RegExp
   ): {
-    <T>(id: string): T;
     keys(): string[];
+    <T>(id: string): T;
   };
 };
 
