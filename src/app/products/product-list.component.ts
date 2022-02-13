@@ -6,6 +6,13 @@ import { Component } from '@angular/core';
 })
 export class ProductListComponent {
   pageTitle: string = 'Product List';
+  imageMeasurements = {
+    width: 50,
+    height: 50,
+    margin: 2,
+  };
+  showImage = false;
+  listFilter = 'cart';
   products: Array<any> = [
     {
       productId: 1,
@@ -28,4 +35,8 @@ export class ProductListComponent {
       imageUrl: 'assets/images/garden_cart.png',
     },
   ];
+
+  toggleImage(): void {
+    this.showImage = !this.showImage;
+  }
 }
