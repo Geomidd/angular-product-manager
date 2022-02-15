@@ -52,6 +52,7 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('In OnInit');
+    this.listFilter = '';
   }
 
   toggleImage(): void {
@@ -63,5 +64,10 @@ export class ProductListComponent implements OnInit {
     return this.products.filter((product: IProduct) =>
       product.productName.toLocaleLowerCase().includes(filterBy)
     );
+  }
+
+  onRatingClicked(message: string): void {
+    console.log(`Notification: ${message}`);
+    this.pageTitle = `Product List - ${message}`;
   }
 }
